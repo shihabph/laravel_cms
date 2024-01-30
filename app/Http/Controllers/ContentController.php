@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Content;
 
 class ContentController extends Controller
 {
@@ -27,6 +29,7 @@ public function store(Request $request)
 }
     public function index()
     {
+        print_r("Hello world!");die;
         $contents = Content::all();
         return view('contents.index', compact('contents'));
     }
